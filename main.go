@@ -43,8 +43,8 @@ func GenerateAddress() common.Address {
 	hash = hash[12:]
 	return address
 }
-func main() {
 
+func GenerateSequenceN() {
 	var n int
 	fmt.Scanln(&n)
 	for {
@@ -83,6 +83,9 @@ func main() {
 		if flag {
 			break
 		}
-		fmt.Println("123123")
 	}
+}
+
+func main() {
+	GenerateSequenceN()
 }
