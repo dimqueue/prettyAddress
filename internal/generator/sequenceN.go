@@ -11,7 +11,7 @@ func GenerateSequenceN() {
 
 	for {
 		var flag = false
-		address := generator.GenerateAddress()
+		address := GenerateAddress()
 		firstNumber := (address[0] & 0xF0) >> 4
 		//fmt.Println("first number:")
 		//fmt.Println(firstNumber)
