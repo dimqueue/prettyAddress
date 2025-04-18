@@ -9,7 +9,7 @@ import (
 	"log"
 )
 
-func GenerateAddress() common.Address {
+func GenerateAddress() (*ecdsa.PrivateKey, common.Address) {
 	privateKey, err := crypto.GenerateKey()
 	if err != nil {
 		log.Fatal(err)
@@ -40,5 +40,5 @@ func GenerateAddress() common.Address {
 	//fmt.Println(hexutil.Encode(hash[12:]))
 	//fmt.Println(hash[12:])
 	hash = hash[12:]
-	return address
+	return privateKey, address
 }
