@@ -2,9 +2,7 @@ package generator
 
 import (
 	"crypto/ecdsa"
-	"fmt"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 	"log"
 )
@@ -15,9 +13,9 @@ func GenerateAddress() (*ecdsa.PrivateKey, common.Address) {
 		log.Fatal(err)
 	}
 
-	privateKeyBytes := crypto.FromECDSA(privateKey)
+	//privateKeyBytes := crypto.FromECDSA(privateKey)
 
-	fmt.Println(hexutil.Encode(privateKeyBytes))
+	//fmt.Println(hexutil.Encode(privateKeyBytes))
 
 	publicKey := privateKey.Public()
 

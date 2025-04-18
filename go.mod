@@ -1,4 +1,4 @@
-module privatekey
+module prettyAddress
 
 go 1.23.1
 

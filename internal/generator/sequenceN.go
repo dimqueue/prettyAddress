@@ -8,9 +8,10 @@ import (
 	"strings"
 )
 
-func GenerateSequenceN(ctx context.Context) (*ecdsa.PrivateKey, bool) {
-	var n int
-	fmt.Scanln(&n)
+// GenerateSequenceN generates an address with a beginning of N identical characters
+func GenerateSequenceN(ctx context.Context, n int) (*ecdsa.PrivateKey, bool) {
+	//var n int
+	//fmt.Scanln(&n)
 	var res *ecdsa.PrivateKey
 	var address common.Address
 
@@ -35,12 +36,12 @@ func GenerateSequenceN(ctx context.Context) (*ecdsa.PrivateKey, bool) {
 				if i == numByte-1 {
 					if n%2 == 0 {
 						if (address[i]&0xF0)>>4 == firstNumber && address[i]&0xF == firstNumber {
-							fmt.Println("finaly: ", address.String()) //strings.ToUpper(address.String())
+							fmt.Println("Address found: ", address.String()) //strings.ToUpper(address.String())
 							//flag = true
 							return res, true
 						}
 					} else if (address[i]&0xF0)>>4 == firstNumber {
-						fmt.Println("finaly2: ", strings.ToUpper(address.String()))
+						fmt.Println("Address found: ", strings.ToUpper(address.String()))
 						//flag = true
 						return res, true
 
