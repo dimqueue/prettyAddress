@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/privatekey.iml" filepath="$PROJECT_DIR$/.idea/privatekey.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/prettyAddress.iml" filepath="$PROJECT_DIR$/.idea/prettyAddress.iml" />
     </modules>
   </component>
 </project>
